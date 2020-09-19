@@ -1,23 +1,14 @@
 {
-  "name": "end",
+  "name": "static-site",
   "version": "1.0.0",
-  "description": "console.log(message);",
-  "main": "npm i inquirer",
+  "description": "",
+  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/queen-stack/readme_auto_gen.git"
-  },
-  "author": "Jenifer Queen",
+  "author": "",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/queen-stack/readme_auto_gen/issues"
-  },
-  "homepage": "https://github.com/queen-stack/readme_auto_gen#readme",
-  "keywords": [
-    "readme",
-    "input"
-  ]
+  "dependencies": {
+    "inquirer": "^6.3.1"
+  }
 }

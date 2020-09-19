@@ -9,7 +9,7 @@ const questions = () => {
     return inquirer.prompt([
 {
     type:
-    name
+    name:
     message:
 
 }
