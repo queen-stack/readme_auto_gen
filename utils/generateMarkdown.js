@@ -46,6 +46,7 @@ const generateMarkdown = response => {
         
         ##test:
             ${response.test}
+            console.log(test);
        
         ##profile:
             ${response.profile}

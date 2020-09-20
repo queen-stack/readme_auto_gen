@@ -47,7 +47,7 @@ const questions = [
         choices: ['classmate' , 'individual contributor' , 'internet research']  
     },
     {
-        type: 'checkbox',
+        type: 'list',
         name: "test",
         message: "What QA test process was done for this project?",
         choices: ['UAT' , 'automation', 'manual functional testing' , 'E2E regression']

@@ -1,8 +1,8 @@
 
         
-        # word web
+        # 
 
-        ![GitHub license](https://img.shields.io/badge/license-Apache 2.0-purple.svg)
+        ![GitHub license](https://img.shields.io/badge/license-MIT-purple.svg)
 
         # Table of Content
         -[description](#description)
@@ -16,26 +16,27 @@
         
 
         ##username:
-            queenstack
+            
         
         ##description:
-            describe
+            
        
         ##installation:
-            install as
+            
         
         ##usage:
-            research
+            innovative solution
         
         ##license:
-            Apache 2.0 
+            MIT 
         
         ##contribution:
             classmate
         
         ##test:
-            manual functional testing
+            UAT
+            console.log(test);
        
         ##profile:
-            jeniferqueen
+            
         
