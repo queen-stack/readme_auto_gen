@@ -4,11 +4,13 @@
     
  
         
-        const userName = questions.userName
+        //const userName = questions.userName
         
         
-        function generateMarkdown(response) {
-          return `
+        //function generateMarkdown(response) {
+        const generateMarkdown = response => {
+        
+        return `
         
         # ${response.title}
         
@@ -16,38 +18,39 @@
         -[description](#description)
         -[installation](#installation)
         -[usage](#usage)
-        -[licenses](#licenses)
+        -[license](#license)
         -[contribution](#contribution)
         -[test](#test)
         -[username](#username)
         -[profile](#profile)
         
-        ${response.username}
+
         ##username:
+        ${response.username}
         
-            ${response.description}
+
         ##description:
-        
+            ${response.description}
+       
+       ##installation:
             ${response.installation}
-        ##installation:
         
+       ##usage:
             ${response.usage}
-        ##usage:
         
-            ${response.licenses}
-        ##licenses:
+        ##license:
+            ${response.license}
         
-            ${response.contribution}
         ##contribution:
+            ${response.contribution}
         
-            ${response.test}
         ##test:
-        
-            ${response.email}
-        ##email:
-        
-            ${response.profile}
+            ${response.test}
+       
+
         ##profile:
+            ${response.profile}
+        
         `;
         }
         

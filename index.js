@@ -1,19 +1,16 @@
 const fs = require("fs");
 const inquirer = require("inquirer");
-//const markdown = require("./generateMarkdown");
+const generateMarkdown = require("./utils/generateMarkdown");
 
 const questions = [
     {   type: 'input',
-        message: "What is the name of the project?",
-        name: "project_title"
+        name: "title",
+        message: "What is the name of the project?"
+       
     },
     {   type: 'input',
-        message: "Please provide a table of contents",
-        name: "table_of_contents"
-    },
-    {   type: 'input',
-        message: "What is the name of the Developer?",
-        name: "name"
+        message: "What is the GitHub userName?",
+        name: "username"
     },
     {   type: 'input',
         message: "What is the github page for this application?",
@@ -31,26 +28,34 @@ const questions = [
         message: "How will this project/ application be used?",
         name: "usage"
     },
-    {   type: 'input',
-        message: "What licenses are required with this project?",
-        name: "licenses"
+    {   type: 'list',
+        name: "license",
+        message: "Does this project require a license?",
+        choices: ['MIT', 'Apache 2.0', 'GPL', 'None']
+        
     },
     {   type: 'input',
-        message: "Who were the contributors to this project?",
+        message: "Were there contributors on this project?",
         name: "contribution"
     },
     {   type: 'input',
         message: "What QA test process were done for this project?",
         name: "test"
+    },
+    {
+        type: 'input',
+        message: "What is your GitHub profile link for this project?",
+        name: "profile"
     }
-]
+];
 
 function init () {
     inquirer.prompt(questions)
-    .then((inquirerResponse, data) => {   
+    .then ((data)  => {   
         console.log("Making ReadMe");
-        fs.writeFileSync("ReadMe.md", inquirerResponse, JSON.stringify(data)); // this is showing object object
-        
+        console.log(JSON.stringify(data));
+        //fs.writeFileSync("ReadMe.md", inquirerResponse, JSON.stringify(data)); // this is showing object object
+        fs.writeFileSync("ReadMe.md", generateMarkdown(data));
     })
     .catch((err) => {
         console.log(err);
@@ -58,8 +63,49 @@ function init () {
 }
 
 init();
-// const userName = questions.userName
-// .then(questions => {
-//   console.log(questions.data);
-// });
+// from generatemkdn file
+// function generateMarkdown(response) {
+//     return `
+  
+//   # ${response.title}
+  
+//   # Table of Content
+//   -[description](#description)
+//   -[installation](#installation)
+//   -[usage](#usage)
+//   -[license](#license)
+//   -[contribution](#contribution)
+//   -[test](#test)
+//   -[username](#username)
+//   -[profile](#profile)
+  
 
+//   ##username:
+//   ${response.username}
+  
+
+//   ##description:
+//       ${response.description}
+ 
+//  ##installation:
+//       ${response.installation}
+  
+//  ##usage:
+//       ${response.usage}
+  
+//   ##license:
+//       ${response.license}
+  
+//   ##contribution:
+//       ${response.contribution}
+  
+//   ##test:
+//       ${response.test}
+ 
+
+//   ##profile:
+//       ${response.profile}
+  
+//   `;
+//   }
+ 
