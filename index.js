@@ -53,8 +53,6 @@ function init () {
     inquirer.prompt(questions)
     .then ((data)  => {   
         console.log("Making ReadMe");
-        console.log(JSON.stringify(data));
-        //fs.writeFileSync("ReadMe.md", inquirerResponse, JSON.stringify(data)); // this is showing object object
         fs.writeFileSync("ReadMe.md", generateMarkdown(data));
     })
     .catch((err) => {
@@ -63,49 +61,3 @@ function init () {
 }
 
 init();
-// from generatemkdn file
-// function generateMarkdown(response) {
-//     return `
-  
-//   # ${response.title}
-  
-//   # Table of Content
-//   -[description](#description)
-//   -[installation](#installation)
-//   -[usage](#usage)
-//   -[license](#license)
-//   -[contribution](#contribution)
-//   -[test](#test)
-//   -[username](#username)
-//   -[profile](#profile)
-  
-
-//   ##username:
-//   ${response.username}
-  
-
-//   ##description:
-//       ${response.description}
- 
-//  ##installation:
-//       ${response.installation}
-  
-//  ##usage:
-//       ${response.usage}
-  
-//   ##license:
-//       ${response.license}
-  
-//   ##contribution:
-//       ${response.contribution}
-  
-//   ##test:
-//       ${response.test}
- 
-
-//   ##profile:
-//       ${response.profile}
-  
-//   `;
-//   }
- 
