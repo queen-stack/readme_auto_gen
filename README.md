@@ -1,6 +1,6 @@
 
         
-        # 
+        # WordWeb
 
         ![GitHub license](https://img.shields.io/badge/license-MIT-purple.svg)
 
@@ -16,16 +16,16 @@
         
 
         ##username:
-            
+            queen-stack
         
         ##description:
-            
+            A dictionary app that allows users to search for a term then returns a definition, pronunciation, and a new word of the day. This provides more learning than bargained for and for those that are avid learners and looking to “hear the word pronounced correctly”.
        
         ##installation:
-            
+            minimally requires access to steady wi-fi and chrome brwoser to render
         
         ##usage:
-            innovative solution
+            research
         
         ##license:
             MIT 
@@ -34,9 +34,9 @@
             classmate
         
         ##test:
-            UAT
-            console.log(test);
+            E2E regression
+          
        
         ##profile:
-            
+            https://www.linkedin.com/in/jeniferqueen/
         
