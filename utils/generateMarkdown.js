@@ -1,19 +1,20 @@
+function renderLicenseBadge(license) {
+    if (license !== "None") {
+        return `![GitHub license](https://img.shields.io/badge/license-${license}-purple.svg)`
+    }
+    return ''
+}
 
-//     ![Top Language](https://img.shields.io/github/languages/top/${data.user}/{$data.title})
-//     ![GitHub Language Count](https://img.shields.io/github/languages/count/${data.user}{data.title})
-    
- 
-        
-        //const userName = questions.userName
-        
-        
-        //function generateMarkdown(response) {
-        const generateMarkdown = response => {
-        
-        return `
+
+//function generateMarkdown(response) {
+const generateMarkdown = response => {
+
+    return `
         
         # ${response.title}
-        
+
+        ${renderLicenseBadge(response.license)}
+
         # Table of Content
         -[description](#description)
         -[installation](#installation)
@@ -26,20 +27,19 @@
         
 
         ##username:
-        ${response.username}
+            ${response.username}
         
-
         ##description:
             ${response.description}
        
-       ##installation:
+        ##installation:
             ${response.installation}
         
-       ##usage:
+        ##usage:
             ${response.usage}
         
         ##license:
-            ${response.license}
+            ${response.license} 
         
         ##contribution:
             ${response.contribution}
@@ -47,12 +47,9 @@
         ##test:
             ${response.test}
        
-
         ##profile:
             ${response.profile}
-        
         `;
-        }
-        
-        module.exports = generateMarkdown;
-       
+}
+
+module.exports = generateMarkdown;
