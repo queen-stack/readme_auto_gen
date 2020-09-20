@@ -3,69 +3,6 @@
 //     ![GitHub Language Count](https://img.shields.io/github/languages/count/${data.user}{data.title})
     
  
-        const fs = require("fs");
-        const inquirer = require("inquirer");
-        const markdown = require("./generateMarkdown");
-        
-        const questions = [
-            {   
-                message: "What is the name of the project?",
-                name: "title"
-            },
-            {   
-                message: "Please provide a table on contents",
-                name: "table of contents"
-            },
-            {   
-                message: "What is the name of the Developer?",
-                name: "Name"
-            },
-            {   
-                message: "What is the github page for this application?",
-                name: "GitHub pages"
-            },
-            {  
-                message: "Please provide a description of the project",
-                name: "description"
-            },
-            {   
-                message: "What is the installation process?",
-                name: "installation"
-            },
-            {   
-                message: "How will this project/ application be used?",
-                name: "usage"
-            },
-            {   
-                message: "What licenses are required with this project?",
-                name: "licenses"
-            },
-            {   
-                message: "Who were the contributors to this project?",
-                name: "contribution"
-            },
-            {   
-                message: "What is the test process for this project?",
-                name: "test"
-            },
-            {   
-                message: "What is the user github email address?",
-                name: "GitHub userName"
-            },
-            ]
-        
-        function init () {
-            inquirer.prompt(questions)
-            .then((inquirerResponse, data) => {   
-                console.log("Making ReadMe");
-                fs.writeFileSync("ReadMe.md", inquirerResponse, data);
-            })
-            .catch((err) => {
-                console.log(err);
-            })
-        }
-        
-        init();
         
         const userName = questions.userName
         
