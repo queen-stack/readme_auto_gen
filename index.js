@@ -1,40 +1,64 @@
-const inquirer = require('inquirer')
-const fs = require('fs');
-const generatePage = require('./Develop/page-template.js'); 
+const fs = require("fs");
+const inquirer = require("inquirer");
+const markdown = require("./generateMarkdown");
 
+// const questions = [
+//     {   
+//         message: "What is the name of the project?",
+//         name: "project title"
+//     },
+//     {   
+//         message: "Please provide a table on contents",
+//         name: "Table of contents"
+//     },
+//     {   
+//         message: "What is the name of the Developer?",
+//         name: "Name"
+//     },
+//     {   
+//         message: "What is the github page for this application?",
+//         name: "GitHub pages"
+//     },
+//     {  
+//         message: "Please provide a description of the project",
+//         name: "description"
+//     },
+//     {   
+//         message: "What is the installation process for the application?",
+//         name: "installation"
+//     },
+//     {   
+//         message: "How will this project/ application be used?",
+//         name: "usage"
+//     },
+//     {   
+//         message: "What licenses are required with this project?",
+//         name: "licenses"
+//     },
+//     {   
+//         message: "Who were the contributors to this project?",
+//         name: "contribution"
+//     },
+//     {   
+//         message: "What QA test process were done for this project?",
+//         name: "test"
+//     },
+// ]
 
-console.log(message);
-// array of questions for user
-const questions = () => {
-    return inquirer.prompt([
-{
-    type:
-    name:
-    message:
-
+function init () {
+    inquirer.prompt(questions)
+    .then((inquirerResponse, data) => {   
+        console.log("Making ReadMe");
+        fs.writeFileSync("ReadMe.md", inquirerResponse, data);
+    })
+    .catch((err) => {
+        console.log(err);
+    })
 }
-];
 
-// function to write README file
-// function writeToFile(fileName, data) {
-// }
-fs.writeToFile('./Develop/index.README.md', pageREADME, err => {
-    if (err) throw new Error(err);
-});
-    console.log('Page created! Check out index.README in this directory to see it!');
-
-
-// function to initialize program
-// function init() {
-// }
-fs.copyFile('./Develop/index.README.md', err => {
-    if (err) {
-      console.log(err);
-      return;
-    }
-    console.log('README.md sheet copied successfully!');
-  });
-
-
-// function call to initialize program
 init();
+const userName = questions.userName
+.then(questions => {
+  console.log(questions.data);
+});
+
