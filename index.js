@@ -11,12 +11,12 @@ const questions = [
     {
         type: 'input',
         name: "username",
-        message: "What is the GitHub userName?"
+        message: "What is your GitHub userName?"
     },
     {
         type: 'input',
         name: "github_pages",
-        message: "What is the github page for this application?"
+        message: "What is the GitHub page for this application?"
     },
     {
         type: 'input',
@@ -29,9 +29,10 @@ const questions = [
         message: "What is the installation process for the application?"
     },
     {
-        type: 'input',
+        type: 'list',
         name: "usage",
-        message: "How will this project/ application be used?",
+        message: "How will this application be used?",
+        choices: ['innovative solution', 'upgrade/maintenance', 'research']
     },
     {
         type: 'list',
@@ -40,19 +41,21 @@ const questions = [
         choices: ['MIT', 'Apache 2.0', 'GPL', 'None']
     },
     {
-        type: 'input',
+        type: 'list',
         name: "contribution",
-        message: "Who contributed on this project?"  
+        message: "Who contributed on this project?",
+        choices: ['classmate' , 'individual contributor' , 'internet research']  
     },
     {
-        type: 'input',
+        type: 'checkbox',
         name: "test",
-        message: "What QA test process were done for this project?"  
+        message: "What QA test process was done for this project?",
+        choices: ['UAT' , 'automation', 'manual functional testing' , 'E2E regression']
     },
     {
         type: 'input',
         name: "profile",
-        message: "What is your GitHub profile link for this project?"
+        message: "What is your Linkedin profile?"
     }
 ];
 
