@@ -1,7 +1,7 @@
 # WordWeb
 ![GitHub license](https://img.shields.io/badge/license-MIT-purple.svg)
 
-# Table of Conten
+# Table of Content
 -[description](#description)
 -[installation](#installation)
 -[usage](#usage)
